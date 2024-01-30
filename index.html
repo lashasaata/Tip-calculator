@@ -8,6 +8,56 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <img src="images/logo.svg" alt="logo" />
+    </header>
+    <main>
+      <div>
+        <section class="leftSection">
+          <div>
+            <label for="bill">Bill</label>
+            <div>
+              <img src="images/icon-dollar.svg" alt="icon-dollar" />
+              <input type="text" placeholder="0" id="bill" />
+            </div>
+            <div>
+              <span>Select Tip %</span>
+              <div>
+                <button>5%</button>
+                <button>10%</button>
+                <button>15%</button>
+                <button>25%</button>
+                <button>50%</button>
+                <input type="text" placeholder="Custom" id="percentage" />
+              </div>
+            </div>
+            <div>
+              <label for="peopleAmount">Number of People</label>
+              <p>Can’t be zero</p>
+              <div>
+                <img src="images/icon-person.svg" alt="icon-person" />
+                <input type="text" placeholder="0" id="peopleAmount" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="rightSection">
+          <div class="totalDivs">
+            <div>
+              <h3>Tip Amount<span>/ person</span></h3>
+            </div>
+            <p>$0.00</p>
+          </div>
+          <div class="totalDivs">
+            <div>
+              <h3>Total<span>/ person</span></h3>
+            </div>
+            <p>$0.00</p>
+          </div>
+          <button id="reset">RESET</button>
+        </section>
+      </div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
