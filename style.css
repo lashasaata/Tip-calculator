@@ -2,3 +2,249 @@
 html {
   font-size: 10px;
 }
+body {
+  background-color: #c5e4e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Space Mono";
+  gap: 87px;
+}
+#logo {
+  margin-top: 40px;
+}
+.mainDiv {
+  width: 920px;
+  height: 481px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 100px;
+}
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.billDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+#billLabel {
+  color: #5e7a7d;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.bill {
+  width: 379px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background-color: #f3f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 17px 0px 19px;
+}
+.bill:hover {
+  cursor: pointer;
+}
+#billInput {
+  color: #00474b;
+  text-align: right;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: normal;
+  width: 89px;
+  opacity: 0.35;
+  border: none;
+  outline: none;
+}
+.tip {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tip span {
+  color: #5e7a7d;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.tipsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 379px;
+  gap: 13px;
+}
+button {
+  all: initial;
+
+  width: 117px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background-color: #00474b;
+
+  color: #fff;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  line-height: normal;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #9fe8df;
+  transition: 0.3s;
+}
+.percentInput {
+  width: 118px;
+  height: 48px;
+  background-color: #f3f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#percentage {
+  all: initial;
+  width: 89px;
+  height: 39px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background-color: #f3f9fa;
+
+  color: #547878;
+  text-align: right;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.peopleDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 379px;
+}
+.peopleDiv label {
+  color: #5e7a7d;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: normal;
+}
+#error {
+  color: #e17457;
+  text-align: right;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: normal;
+  display: none;
+}
+.peopleInput {
+  width: 379px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background-color: #f3f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 17px 0px 19px;
+  margin-top: 6px;
+}
+.peopleInput:hover {
+  cursor: pointer;
+}
+#peopleAmount {
+  color: #00474b;
+  text-align: right;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: normal;
+  width: 89px;
+  opacity: 0.35;
+  border: none;
+  outline: none;
+}
+.rightSection {
+  width: 413px;
+  height: 417px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #00474b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0px;
+  gap: 25px;
+}
+.totalDivs {
+  width: 333px;
+  height: 71px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resultTip {
+  display: inline-flex;
+  padding-bottom: 1px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.resultSpans {
+  color: #7f9d9f;
+  font-size: 1.3rem;
+}
+.resultPs {
+  color: #26c2ae;
+  text-align: right;
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1px;
+}
+#reset {
+  margin-top: 97px;
+  width: 333px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background-color: #0d686d;
+
+  color: #00474b;
+  text-align: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  opacity: 0.35;
+}
+#reset:hover {
+  transition: 0.4s;
+  opacity: 1;
+  background-color: #9fe8df;
+}
+input {
+  background-color: #f3f9fa;
+}
+input:hover {
+  cursor: pointer;
+}
