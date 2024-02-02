@@ -9,52 +9,56 @@
   </head>
   <body>
     <header>
-      <img src="images/logo.svg" alt="logo" />
+      <img id="logo" src="images/logo.svg" alt="logo" />
     </header>
     <main>
-      <div>
+      <div class="mainDiv">
         <section class="leftSection">
-          <div>
-            <label for="bill">Bill</label>
-            <div>
+          <div class="billDiv">
+            <label for="billInput" id="billLabel">Bill</label>
+            <div class="bill" id="bill">
               <img src="images/icon-dollar.svg" alt="icon-dollar" />
-              <input type="text" placeholder="0" id="bill" />
+              <input type="text" placeholder="0" id="billInput" />
             </div>
-            <div>
-              <span>Select Tip %</span>
-              <div>
-                <button>5%</button>
-                <button>10%</button>
-                <button>15%</button>
-                <button>25%</button>
-                <button>50%</button>
+          </div>
+          <div class="tip">
+            <span>Select Tip %</span>
+            <div class="tipsDiv">
+              <button class="tipBut">5%</button>
+              <button class="tipBut">10%</button>
+              <button class="tipBut">15%</button>
+              <button class="tipBut">25%</button>
+              <button class="tipBut">50%</button>
+              <div class="percentInput" id="percentInput">
                 <input type="text" placeholder="Custom" id="percentage" />
               </div>
             </div>
-            <div>
-              <label for="peopleAmount">Number of People</label>
-              <p>Can’t be zero</p>
-              <div>
-                <img src="images/icon-person.svg" alt="icon-person" />
-                <input type="text" placeholder="0" id="peopleAmount" />
-              </div>
+          </div>
+          <div class="peopleDiv">
+            <label for="peopleAmount">Number of People</label>
+            <p id="error">Can’t be zero</p>
+            <div class="peopleInput" id="peopleInput">
+              <img src="images/icon-person.svg" alt="icon-person" />
+              <input type="text" placeholder="0" id="peopleAmount" />
             </div>
           </div>
         </section>
         <section class="rightSection">
           <div class="totalDivs">
-            <div>
-              <h3>Tip Amount<span>/ person</span></h3>
+            <div class="resultTip">
+              <h3>
+                Tip Amount <br /><span class="resultSpans">/ person</span>
+              </h3>
             </div>
-            <p>$0.00</p>
+            <p class="resultPs">$0.00</p>
           </div>
           <div class="totalDivs">
-            <div>
-              <h3>Total<span>/ person</span></h3>
+            <div class="resultPeople">
+              <h3>Total <br /><span class="resultSpans">/ person</span></h3>
             </div>
-            <p>$0.00</p>
+            <p class="resultPs">$0.00</p>
           </div>
-          <button id="reset">RESET</button>
+          <button id="reset" onclick="reset()">RESET</button>
         </section>
       </div>
     </main>
