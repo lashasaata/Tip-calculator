@@ -109,6 +109,7 @@ button:hover {
 .percentInput {
   width: 118px;
   height: 48px;
+  border-radius: 5px;
   background-color: #f3f9fa;
   display: flex;
   align-items: center;
@@ -247,4 +248,65 @@ input {
 }
 input:hover {
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  body {
+    gap: 41px;
+  }
+  .mainDiv {
+    flex-direction: column;
+    width: 375px;
+    height: 789px;
+    gap: 32px;
+  }
+  .leftSection {
+    width: 311px;
+    gap: 32px;
+  }
+  .bill {
+    width: 311px;
+  }
+  .tipsDiv {
+    width: 311px;
+    gap: 16px;
+  }
+  .percentInput {
+    width: 147.814px;
+  }
+  .tipBut {
+    width: 146.631px;
+  }
+  .peopleDiv {
+    width: 311px;
+  }
+  .peopleInput {
+    width: 311px;
+  }
+  .rightSection {
+    width: 327px;
+    height: 257px;
+    gap: 20px;
+    padding: 37px 0px 24px;
+  }
+  .totalDivs {
+    width: 281px;
+    height: 48px;
+    padding-bottom: 1px;
+  }
+  .resultPs {
+    text-align: right;
+    font-size: 3.2rem;
+    line-height: normal;
+    letter-spacing: -0.667px;
+  }
+  #reset {
+    margin-top: 13px;
+    width: 281px;
+  }
+}
+@media (max-width: 375px) {
+  .mainDiv {
+    border-radius: 25px 25px 0px 0px;
+  }
 }
