@@ -68,7 +68,16 @@ billInput.addEventListener("input", (event) => {
   } else {
     billAmount = parseFloat(event.target.value);
   }
-  calculation();
+  // if inut is negative sets red color
+  if (billAmount < 0) {
+    billDiv.style.border = "2px solid #E17052";
+  } else {
+    billDiv.style.border = "2px solid #26C2AE";
+  }
+  // checks if inputs are negative
+  if (billAmount >= 0 && tipAmount >= 0 && peoplesAmount >= 0) {
+    calculation();
+  }
 });
 
 costumPercentage.addEventListener("input", (event) => {
@@ -80,8 +89,17 @@ costumPercentage.addEventListener("input", (event) => {
   }
   costumTip = inputNum;
 
+  // if inut is negative sets red color
+  if (tipAmount < 0) {
+    percentInput.style.border = "2px solid #E17052";
+  } else {
+    percentInput.style.border = "2px solid #26C2AE";
+  }
+
   tipAmount = parseFloat(costumPercentage.value);
-  calculation();
+  if (billAmount >= 0 && tipAmount >= 0 && peoplesAmount >= 0) {
+    calculation();
+  }
 });
 costumPercentage.addEventListener("focus", (event) => {
   costumPercentage.placeholder = "";
@@ -104,6 +122,13 @@ peopleAmount.addEventListener("input", (event) => {
     peopleAmount.style.color = "#00474B";
     peopleAmount.style.opacity = "1";
   }
+  // if inut is negative sets red color
+  if (peoplesAmount < 0) {
+    peopleInput.style.border = "2px solid #E17052";
+  } else {
+    peopleInput.style.border = "2px solid #26C2AE";
+  }
+
   if (inputNum == 0) {
     peopleInput.style.border = "2px solid #E17052";
     errorP.style.display = "block";
@@ -111,9 +136,10 @@ peopleAmount.addEventListener("input", (event) => {
     peopleInput.style.border = "2px solid #26C2AE";
     errorP.style.display = "none";
   }
-
   peoplesAmount = parseInt(event.target.value);
-  calculation();
+  if (billAmount >= 0 && tipAmount >= 0 && peoplesAmount >= 0) {
+    calculation();
+  }
 });
 // activate buttons
 let buttonsArr = Array.from(tipButtons);
@@ -174,6 +200,9 @@ function calculation() {
     resetButton.style.backgroundColor = "#0D686D";
     resetButton.style.opacity = "0.35";
   }
+  // console.log(tipAmount);
+  // console.log(billAmount);
+  // console.log(peoplesAmount);
 }
 // reset button
 
