@@ -75,7 +75,12 @@ billInput.addEventListener("input", (event) => {
     billDiv.style.border = "2px solid #26C2AE";
   }
   // checks if inputs are negative
-  if (billAmount >= 0 && tipAmount >= 0 && peoplesAmount >= 0) {
+  if (
+    billAmount >= 0 &&
+    tipAmount >= 0 &&
+    peoplesAmount >= 0 &&
+    inputArr.length <= 6
+  ) {
     calculation();
   }
 });
@@ -97,7 +102,12 @@ costumPercentage.addEventListener("input", (event) => {
   }
 
   tipAmount = parseFloat(costumPercentage.value);
-  if (billAmount >= 0 && tipAmount >= 0 && peoplesAmount >= 0) {
+  if (
+    billAmount >= 0 &&
+    tipAmount >= 0 &&
+    peoplesAmount >= 0 &&
+    tipAmount <= 1000
+  ) {
     calculation();
   }
 });
@@ -122,12 +132,9 @@ peopleAmount.addEventListener("input", (event) => {
     peopleAmount.style.color = "#00474B";
     peopleAmount.style.opacity = "1";
   }
+  peoplesAmount = parseInt(event.target.value);
   // if inut is negative sets red color
-  if (peoplesAmount < 0) {
-    peopleInput.style.border = "2px solid #E17052";
-  } else {
-    peopleInput.style.border = "2px solid #26C2AE";
-  }
+  console.log(peoplesAmount);
 
   if (inputNum == 0) {
     peopleInput.style.border = "2px solid #E17052";
@@ -136,8 +143,17 @@ peopleAmount.addEventListener("input", (event) => {
     peopleInput.style.border = "2px solid #26C2AE";
     errorP.style.display = "none";
   }
-  peoplesAmount = parseInt(event.target.value);
-  if (billAmount >= 0 && tipAmount >= 0 && peoplesAmount >= 0) {
+  if (peoplesAmount < 0) {
+    peopleInput.style.border = "2px solid #E17052";
+  } else if (peoplesAmount > 0) {
+    peopleInput.style.border = "2px solid #26C2AE";
+  }
+  if (
+    billAmount >= 0 &&
+    tipAmount >= 0 &&
+    peoplesAmount >= 0 &&
+    inputArr.length <= 6
+  ) {
     calculation();
   }
 });
